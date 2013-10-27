@@ -1,0 +1,24 @@
+<IfModule mod_rewrite.c>
+
+## REWRITE DEFAULTS
+RewriteEngine On
+#RewriteBase /bluehome/HTML/
+RewriteBase /
+
+Options +SymLinksIfOwnerMatch
+
+## REQUIRE SUBDOMAIN
+RewriteCond %{HTTP_HOST} !^$
+RewriteCond %{HTTP_HOST} !^www\.blue-home\.net$ [NC]
+RewriteRule ^/(.*)$ http://www.blue-home.net/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^blue-home.net
+RewriteRule (.*) http://www.blue-home.net/$1 [R=301,L]
+
+#RewriteCond %{REQUEST_URI} !^/(downloads|img).*$
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php?id=$1 [L]
+
+</IfModule>
