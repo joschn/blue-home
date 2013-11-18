@@ -11,7 +11,7 @@ $GLOBALS['index_id'] = "start";
 if( $_SERVER['SERVER_NAME'] == "js.dev" )
 {
 	$GLOBALS['urlrewrite']  = 0; // Angeben, ob URL-Rewriting an oder aus ist.
-	$GLOBALS['basedir']     = 'http://js.dev/bluehome/HTML/'; // var_dump($GLOBALS['basedir']);
+	$GLOBALS['basedir']     = 'http://js.dev/blue-home/htdocs/'; // var_dump($GLOBALS['basedir']);
 }
 else
 {
