@@ -12,11 +12,13 @@ if( $_SERVER['SERVER_NAME'] == "js.dev" )
 {
 	$GLOBALS['urlrewrite']  = 0; // Angeben, ob URL-Rewriting an oder aus ist.
 	$GLOBALS['basedir']     = 'http://js.dev/blue-home/htdocs/'; // var_dump($GLOBALS['basedir']);
+	$GLOBALS['basepath']    = '/blue-home/htdocs/';
 }
 else
 {
 	$GLOBALS['urlrewrite']  = 1; // Angeben, ob URL-Rewriting an oder aus ist.
 	$GLOBALS['basedir']     = 'http://www.blue-home.net/'; // var_dump($GLOBALS['basedir']);
+	$GLOBALS['basepath']    = '/';
 }
 
 
@@ -65,6 +67,7 @@ $tObj = new Tpl();
  ******************************************/
 
 $page_placeholders['basedir']     = $GLOBALS['basedir'];
+$page_placeholders['basepath']    = $GLOBALS['basepath'];
 $page_placeholders['id']     = $id;
 
 /**

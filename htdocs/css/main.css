@@ -71,7 +71,7 @@ hr.chapter {
 body, td, li, p, #page-start h1 {font-size: 12px; line-height: 18px}
 body, #page-start h1 {color: #002a6f; font-family: Verdana}
 .col-1 h1, .col-1 h2 {padding: 0 0 1em 0; background: none}
-h1, h1.chapter, h2, h2.chapter {
+h1, h1.chapter /*, h2, h2.chapter */ {
     color: #0081c6;
     font-size: 18px;
     font-weight: normal;
@@ -82,12 +82,32 @@ h1, h1.chapter, h2, h2.chapter {
 
 h1 em, h2 em {font-weight: bold; font-style: normal}
 
-h3 {
+h2, h3 {
     color: #0081c6;
 	font-size: 14px;
     font-weight: normal;
 	padding: 0 1em .55em 0;
 }
+
+.p-strong {
+	color: #002a6f;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 18px;
+    padding-bottom: .7em;
+}
+
+/**** Test: *****/
+/*
+h1:before {content:'<h1>'; color: red}
+h1:after {content:'</h1>'; color: red}
+h2:before {content:'<h2>'; color: red}
+h2:after {content:'</h2>'; color: red}
+h3:before {content:'<h3>'; color: red}
+h3:after {content:'</h3>'; color: red}
+h4:before {content:'<h4>'; color: red}
+h4:after {content:'</h4>'; color: red}
+*/
 
 /* Grundformate */
 
